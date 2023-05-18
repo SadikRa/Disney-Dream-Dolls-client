@@ -48,7 +48,7 @@ const Login = () => {
                 <input className="btn btn-primary" type="submit" value="Login" />
               </div>
               </form>
-             <div className="text-center">
+             <div className="text-center my-3">
              <button onClick={handleLoginGoogle} className="btn btn-outline">
                 <FaGoogle/> Login with Google
               </button>
