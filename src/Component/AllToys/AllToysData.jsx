@@ -1,9 +1,9 @@
+import { Link } from "react-router-dom";
+
 // eslint-disable-next-line react/prop-types
 const AllToysData = ({ data, index }) => {
-    const {
-         // eslint-disable-next-line react/prop-types
-         toyName, sellerName, subCategory, price, availableQuantity
-    } = data;
+    // eslint-disable-next-line react/prop-types
+    const { toyName, sellerName, subCategory, price, availableQuantity, _id } = data;
   return (
     <tbody>
       <tr>
@@ -13,7 +13,7 @@ const AllToysData = ({ data, index }) => {
         <td>{subCategory}</td>
         <td>{price}</td>
         <td>{availableQuantity}</td>
-        <td><button className="btn btn-primary">View Details</button></td>
+        <Link to={`/detailsPage/${_id}`}><button className="btn btn-primary">View Details</button></Link>
       </tr>
     </tbody>
   );
