@@ -6,6 +6,10 @@ const AllToys = () => {
   console.log(allData);
   return (
     <div className="my-8">
+        <div className="my-5">
+        <input type="text" placeholder="Search" className="input input-bordered w-full max-w-xs" />
+        <button className="btn btn-outline btn-primary">Search</button>
+        </div>
          <table className="table w-full">
       <thead>
         <tr>

@@ -49,10 +49,10 @@ const Navbar = () => {
                 <Link to="/allToys">All Toys</Link>
               </li>
               <li>
-                <Link>My Toys</Link>
+                <Link to='/myToy'>My Toys</Link>
               </li>
               <li>
-                <Link>Add A Toy</Link>
+                <Link to="/addAToy">Add A Toy</Link>
               </li>
               <li>
                 <Link to="/blog">Blogs</Link>
@@ -75,7 +75,7 @@ const Navbar = () => {
             <li>
               <Link to="/blog">Blogs</Link>
             </li>
-            <li>{user ? <Link>My Toys</Link> : ""}</li>
+            <li>{user ? <Link to='/myToy'>My Toys</Link> : ""}</li>
             <li>{user ? <Link to="/addAToy">Add A Toy</Link> : ""}</li>
           </ul>
         </div>
