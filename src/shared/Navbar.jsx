@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProviders";
+import logo from "../assets/logo.jpg";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -45,7 +46,7 @@ const Navbar = () => {
                 <Link to="/">Home</Link>
               </li>
               <li tabIndex={0}>
-                <Link>All Toys</Link>
+                <Link to="/allToys">All Toys</Link>
               </li>
               <li>
                 <Link>My Toys</Link>
@@ -54,13 +55,14 @@ const Navbar = () => {
                 <Link>Add A Toy</Link>
               </li>
               <li>
-                <Link>Blogs</Link>
+                <Link to="/blog">Blogs</Link>
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-xl">
+          <Link to='/' className="btn btn-ghost normal-case text-xl">
+            <img className="w-12 h-12 rounded" src={logo} alt="" />
             Disney Dream Dolls
-          </a>
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -68,21 +70,13 @@ const Navbar = () => {
               <Link to="/">Home</Link>
             </li>
             <li tabIndex={0}>
-              <Link>All Toys</Link>
+              <Link to="/allToys">All Toys</Link>
             </li>
             <li>
-              <Link>Blogs</Link>
+              <Link to="/blog">Blogs</Link>
             </li>
-            <li>
-              {
-                user ? <Link>My Toys</Link> : ''
-              }
-            </li>
-            <li>
-             {
-              user ?  <Link to='/addAToy'>Add A Toy</Link> : ''
-             }
-            </li>
+            <li>{user ? <Link>My Toys</Link> : ""}</li>
+            <li>{user ? <Link to="/addAToy">Add A Toy</Link> : ""}</li>
           </ul>
         </div>
         <div className="navbar-end">

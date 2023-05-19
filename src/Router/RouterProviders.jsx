@@ -6,6 +6,7 @@ import Register from "../Component/Register/Register";
 import ErrorPage from "../ErrorPage";
 import AddAToy from "../Component/AddAToy/AddAToy";
 import Blogs from "../Component/Blogs/Blogs";
+import AllToys from "../Component/AllToys/AllToys";
 
 const router = createBrowserRouter([
     {
@@ -32,6 +33,11 @@ const router = createBrowserRouter([
         {
           path: '/blog',
           element: <Blogs></Blogs>
+        },
+        {
+          path: '/allToys',
+          element: <AllToys></AllToys>,
+          loader: () => fetch('https://assessment-11-server.vercel.app/toyStores')
         }
 
       ]

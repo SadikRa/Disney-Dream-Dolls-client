@@ -65,7 +65,7 @@ const CategoryShop = () => {
                   
                   <div className="card-actions justify-end">
                     <button className="btn btn-primary">
-                      View Details button
+                      View Details
                     </button>
                   </div>
                 </div>
@@ -97,7 +97,7 @@ const CategoryShop = () => {
                   
                   <div className="card-actions justify-end">
                     <button className="btn btn-primary">
-                      View Details button
+                      View Details
                     </button>
                   </div>
                 </div>
@@ -130,7 +130,7 @@ const CategoryShop = () => {
                   
                   <div className="card-actions justify-end">
                     <button className="btn btn-primary">
-                      View Details button
+                      View Details
                     </button>
                   </div>
                 </div>
