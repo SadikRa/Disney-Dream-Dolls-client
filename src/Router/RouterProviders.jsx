@@ -4,6 +4,8 @@ import Home from "../Component/Home/Home";
 import Login from "../Component/Login/Login";
 import Register from "../Component/Register/Register";
 import ErrorPage from "../ErrorPage";
+import AddAToy from "../Component/AddAToy/AddAToy";
+import Blogs from "../Component/Blogs/Blogs";
 
 const router = createBrowserRouter([
     {
@@ -13,7 +15,7 @@ const router = createBrowserRouter([
       children: [
         {
           path: '/',
-          element: <Home></Home>
+          element: <Home></Home>,
         },
         {
           path: '/login',
@@ -23,6 +25,14 @@ const router = createBrowserRouter([
           path: '/register',
           element: <Register></Register>
         },
+        {
+          path: 'addAToy',
+          element: <AddAToy></AddAToy>
+        },
+        {
+          path: '/blog',
+          element: <Blogs></Blogs>
+        }
 
       ]
     },
