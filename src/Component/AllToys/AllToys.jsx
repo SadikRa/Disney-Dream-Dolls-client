@@ -1,14 +1,34 @@
-import { useLoaderData } from "react-router-dom";
+
 import AllToysData from "./AllToysData";
+import { useEffect, useState } from "react";
 
 const AllToys = () => {
-  const allData = useLoaderData();
-  console.log(allData);
+  const [allData, setAllData] = useState([])
+  const [searchText, setSearchText] = useState("");
+
+
+  useEffect(() => {
+    fetch('https://assessment-11-server.vercel.app/toyStores')
+    .then(res => res.json())
+    .then(data =>{
+        setAllData(data)
+    })
+  }, [])
+
+  const handleSearch = () =>{
+    fetch(`https://assessment-11-server.vercel.app/getSearchToy/${searchText}`)
+    .then(res => res.json())
+    .then(data =>{
+        setAllData(data)
+    })
+  }
+
+
   return (
     <div className="my-8">
         <div className="my-5">
-        <input type="text" placeholder="Search" className="input input-bordered w-full max-w-xs" />
-        <button className="btn btn-outline btn-primary">Search</button>
+        <input  onChange={(e) => setSearchText(e.target.value)} type="text" placeholder="Search" className="input input-bordered w-full max-w-xs" />
+        <button onClick={handleSearch} className="btn btn-outline btn-primary">Search</button>
         </div>
          <table className="table w-full">
       <thead>
