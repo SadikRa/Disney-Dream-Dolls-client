@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../providers/AuthProviders";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 
 const MyToy = () => {
@@ -70,7 +71,7 @@ const MyToy = () => {
             <p>{data?.description}</p>
             <div className="card-actions justify-end">
               <button onClick={() => handleDelete(data._id)} className="btn btn-primary">X</button>
-              <button className="btn btn-primary">Update</button>
+             <Link to={`/updateToy/${data._id}`}> <button className="btn btn-primary">Update</button></Link>
             </div>
           </div>
         </div>
