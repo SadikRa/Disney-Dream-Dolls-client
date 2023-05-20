@@ -1,8 +1,10 @@
 import { FaRegStar, FaStar } from "react-icons/fa";
 import Rating from "react-rating";
 import { useLoaderData } from "react-router-dom";
+import UseTitle from "../hooks/UseTitle";
 
 const SingleToyDetailsPage = () => {
+    UseTitle('Details')
     const singleData = useLoaderData()
     const {picture, toyName, sellerName, sellerEmail, subCategory, price, rating, availableQuantity, description } = singleData;
     return (

@@ -2,9 +2,10 @@ import Banner from "./Banner";
 import Gallery from "./Gallery";
 import CategoryShop from "./CategoryShop";
 import ShopToy from "./shopToy";
+import UseTitle from "../../hooks/UseTitle";
 
 const Home = () => {
-
+    UseTitle('Home')
     return (
         <div>
             <div className="my-5">

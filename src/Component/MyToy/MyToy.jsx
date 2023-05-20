@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../providers/AuthProviders";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
+import UseTitle from "../../hooks/UseTitle";
 
 
 const MyToy = () => {
@@ -9,7 +10,7 @@ const MyToy = () => {
   const { user } = useContext(AuthContext);
   const [myData, setMyData] = useState([]);
   const [myToy , setMyToy] = useState()
-
+  UseTitle('My Toy')
   useEffect(() => {
     fetch("https://assessment-11-server.vercel.app/toyStores")
       .then((res) => res.json())
@@ -58,7 +59,7 @@ const MyToy = () => {
 
 
   return (
-    <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-6">
+    <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-6 my-12">
       {myData?.map((data) => (
         <div className="card card-compact w-96 bg-base-100 shadow-xl" key={data._id}>
           <figure>
