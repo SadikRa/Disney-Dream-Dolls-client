@@ -13,7 +13,7 @@ const AddAToy = () => {
         const price = form.price.value;
         const rating = form.rating.value;
         const availableQuantity = form.availableQuantity.value;
-        const description = form.availableQuantity.value;
+        const description = form.description.value;
         const data = {
             picture, toyName, sellerName, sellerEmail, subCategory, price, rating, availableQuantity, description
         }
